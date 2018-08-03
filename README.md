@@ -3,7 +3,7 @@
 
 # Details #
 * Run as root ( or sudo )
-* Add Hadoop to your environment with one command: `./hadooper.sh` (Single Node Installation)
+* Add Hadoop to your single host environment with one command: `./hadooper.sh`
 * Can be easily integrated with an virtualization project by adding the command to the runtime execution...
 
 # Usage #
