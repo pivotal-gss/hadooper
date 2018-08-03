@@ -80,4 +80,8 @@ Always review the log file for validation.
 In Progress:
 
 * Variable Configuration File:
+ * Hadoop Version
+ * Install Directory
+ * Data Directories
+ * ...whatever your comments lead to...
 
