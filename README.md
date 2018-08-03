@@ -3,8 +3,8 @@
 
 # Details #
 * Run as root ( or sudo )
-* Add Standalone Hadoop to your existing environment with one command: `./hadooper.sh`
-* Can be easily integrated with an virtualization project by adding the command to the runtime execution (piv-go-gpdb, spark-cluster,...). 
+* Add Hadoop to your environment with one command: `./hadooper.sh` (Single Node Installation)
+* Can be easily integrated with an virtualization project by adding the command to the runtime execution...
 
 # Usage #
 * Run `./hadooper.sh`
@@ -83,5 +83,6 @@ In Progress:
  * Hadoop Version
  * Install Directory
  * Data Directories
- * ...whatever your comments lead to...
+ * Multi Server / Node Installation
+ * Whatever your commits lead to...
 
