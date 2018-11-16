@@ -84,5 +84,5 @@ In Progress:
  * Install Directory
  * Data Directories
  * Multi Server / Node Installation
- * Whatever your commits lead to...
+ * Whatever your commits lead to!
 
