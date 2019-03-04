@@ -265,8 +265,8 @@ printf "Sourcing Variables..."  | tee -a /tmp/hadoop_installer.out && printf "\n
     cat > ~/.bash_profile<<'    EOF'
 
     source /etc/profile.d/hadoop-profile.sh
-    source $HADOOP_PREFIX/etc/hadoop/hadoop-env.sh
-    source $HADOOP_PREFIX/etc/hadoop/yarn-env.sh
+    source $HADOOP_HOME/etc/hadoop/hadoop-env.sh
+    source $HADOOP_HOME/etc/hadoop/yarn-env.sh
 
     EOF
 				
