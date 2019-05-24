@@ -242,8 +242,8 @@ printf "\t Hadoop Daemons: /etc/hadoop/hadoop-service.sh "  | tee -a /tmp/hadoop
     Group=root
     Type=oneshot
     ExecStart=/bin/bash /usr/local/hadoop/etc/hadoop/hadoop-service.sh start
-    ExecStop=/bin/bsh /usr/local/hadoop/etc/hadoop/hadoop-service.sh stop
-    WorkingDirectory=/usr/local/hadoop/
+    ExecStop=/bin/bash /usr/local/hadoop/etc/hadoop/hadoop-service.sh stop
+    WorkingDirectory=/usr/local/hadoop/etc/hadoop
     RemainAfterExit=yes
 
     [Install]
