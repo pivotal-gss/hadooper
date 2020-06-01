@@ -83,7 +83,7 @@ spinner $!
 #
 HADOOP_PREFIX=/usr/local/hadoop
 printf "Download & Extract Hadoop [/usr/local]..."  | tee -a /tmp/hadoop_installer.out && printf "\n\n" >> /tmp/hadoop_installer.out
-( curl -s http://www.apache.org/dist/hadoop/common/hadoop-2.7.7/hadoop-2.7.7.tar.gz | tar -xz -C /usr/local/ ) >> /tmp/hadoop_installer.out 2>&1 &
+( curl -s https://downloads.apache.org/hadoop/common/hadoop-2.7.7/hadoop-2.7.7.tar.gz | tar -xz -C /usr/local/ ) >> /tmp/hadoop_installer.out 2>&1 &
 spinner $!
 
 #
