@@ -81,9 +81,15 @@ spinner $!
 #
 #HADOOP
 #
+printf "/nSelect Version:/n"
+select HDP in $(curl -s https://archive.apache.org/dist/hadoop/common/ | grep -Po 'href="\K(hadoop-[1-9].*)(?=/")')
+do
+  break
+done
+
 HADOOP_PREFIX=/usr/local/hadoop
 printf "Download & Extract Hadoop [/usr/local]..."  | tee -a /tmp/hadoop_installer.out && printf "\n\n" >> /tmp/hadoop_installer.out
-( curl -s https://downloads.apache.org/hadoop/common/hadoop-2.7.7/hadoop-2.7.7.tar.gz | tar -xz -C /usr/local/ ) >> /tmp/hadoop_installer.out 2>&1 &
+( curl -s https://archive.apache.org/dist/hadoop/common/$HDP/$HDP.tar.gz | tar -xz -C /usr/local/ ) >> /tmp/hadoop_installer.out 2>&1 &
 spinner $!
 
 #
