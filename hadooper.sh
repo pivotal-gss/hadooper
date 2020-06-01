@@ -84,6 +84,7 @@ spinner $!
 printf "/nSelect Version:/n"
 select HDP in $(curl -s https://archive.apache.org/dist/hadoop/common/ | grep -Po 'href="\K(hadoop-[1-9].*)(?=/")')
 do
+  printf "$HDP..."
   break
 done
 
