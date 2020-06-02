@@ -106,7 +106,7 @@ spinner $!
 
 # HADOOP SYMLINK
 printf "\t Symlink Hadoop: /usr/local/hadoop "  | tee -a /tmp/hadoop_installer.out && printf "\n\n" >> /tmp/hadoop_installer.out
-( if [ -f "/usr/local/hadoop" ]; then rm /usr/local/hadoop; fi && ln -s /usr/local/$HDP /usr/local/hadoop ) >> /tmp/hadoop_installer.out 2>&1 &
+( if [ -e "/usr/local/hadoop" ]; then rm /usr/local/hadoop; fi && ln -s /usr/local/$HDP /usr/local/hadoop ) >> /tmp/hadoop_installer.out 2>&1 &
 spinner $!
 
 
@@ -135,7 +135,7 @@ printf "\t Environment Variables: /etc/profile.d/hadoop-profile.sh "  | tee -a /
 spinner $!
 
 
-# HADOOP SYMLINK
+# HADOOP DATA
 printf "\t Create Data Directories: /data/hdfs/namenode /data/hdfs/datanode "  | tee -a /tmp/hadoop_installer.out && printf "\n\n" >> /tmp/hadoop_installer.out
 ( mkdir -p /data/hdfs/namenode /data/hdfs/datanode ) >> /tmp/hadoop_installer.out 2>&1 &
 spinner $!
