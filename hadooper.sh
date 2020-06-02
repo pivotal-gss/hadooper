@@ -1,7 +1,7 @@
 #!/bin/bash
 
 printf '=%.0s' {1..80} && echo
-echo "Install script for Hadoop 2.7 on CentOS 7/x86_64"
+echo "Install script for Hadoop"
 printf '=%.0s' {1..80} && echo
 
 if [[ $EUID -ne 0 ]]; then
@@ -81,7 +81,7 @@ spinner $!
 #
 #HADOOP
 #
-printf "/nSelect Version:/n"
+printf "\nSelect Version:\n"
 select HDP in $(curl -s https://archive.apache.org/dist/hadoop/common/ | grep -Po 'href="\K(hadoop-[1-9].*)(?=/")')
 do
   printf "$HDP..."
