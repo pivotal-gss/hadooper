@@ -106,7 +106,7 @@ spinner $!
 
 # HADOOP SYMLINK
 printf "\t Symlink Hadoop: /usr/local/hadoop "  | tee -a /tmp/hadoop_installer.out && printf "\n\n" >> /tmp/hadoop_installer.out
-( if [ -e "/usr/local/hadoop" ]; then rm /usr/local/hadoop; fi && ln -s /usr/local/$HDP /usr/local/hadoop ) >> /tmp/hadoop_installer.out 2>&1 &
+( if [ -L "/usr/local/hadoop" ]; then rm /usr/local/hadoop; fi && ln -s /usr/local/$HDP /usr/local/hadoop ) >> /tmp/hadoop_installer.out 2>&1 &
 spinner $!
 
 
